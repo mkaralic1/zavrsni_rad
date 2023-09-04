@@ -21,7 +21,7 @@ def create_dest(dest: schemas.DestCreate, db: Session = Depends(get_db)):
 @router.get("/", response_model=List[schemas.DestOut])
 def get_destinations(db: Session = Depends(get_db)):
     destinations = db.query(models.Destination).all()
-    destinations_out = [schemas.DestOut(id=dest.id,     name=dest.name) for dest in destinations]
+    destinations_out = [schemas.DestOut(id=dest.id, name=dest.name) for dest in destinations]
     return destinations_out
 
 

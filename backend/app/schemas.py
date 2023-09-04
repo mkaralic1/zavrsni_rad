@@ -39,7 +39,6 @@ class DestCreate(Destination):
 class DestOut(DestCreate):
     id: int
     name: str
-    created_at: datetime
     
     class Config:
         orm_mode=True

@@ -10,7 +10,7 @@ from .routers import post, user, auth, vote, destination
 
 app=FastAPI()
 
-origins=["*"]
+origins = ["*"]
 
 app.add_middleware(
     CORSMiddleware,
